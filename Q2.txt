@@ -1,0 +1,29 @@
+The key differences between absolute and relative positioning in CSS are in how they affect an element's
+position and its interaction with other elements on the page:
+
+Relative Positioning (position: relative;)
+Positioning Context: The element remains within the normal document flow, meaning it takes up space as
+it normally would.Movement: Shifting the element using top, bottom, left, or right properties moves it
+relative to its default position, without affecting other elements' positions.
+
+Effect on Layout:
+Other elements on the page aren't affected by the shifted element; they behave as if the element is in its 
+original position.
+Ancestor Influence: The positioned element is positioned relative to its normal position or relative to 
+its closest positioned ancestor.
+
+
+
+Absolute Positioning (position: absolute;)
+Positioning Context: The element is taken out of the normal document flow and doesn't occupy space in 
+the layout, allowing other elements to flow around it.
+Movement: Positioning with top, bottom, left, or right properties places the element precisely based on 
+its closest positioned ancestor or the document body if no ancestor has a positioning context.
+
+Effect on Layout: Other elements ignore the absolutely positioned element, meaning they won't be
+affected by its movement or absence in the layout.
+Ancestor Influence: The element is positioned relative to its closest ancestor with a positioning context,
+typically using position: relative;, position: absolute;, or position: fixed;.
+
+
+

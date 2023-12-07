@@ -1,0 +1,51 @@
+<!-- The z-index property in CSS controls the stacking order of elements on a web page, allowing you to 
+specify which elements should appear in front of or behind others. It works along the z-axis, 
+perpendicular to the screen.
+
+Basic Explanation:
+Higher Values: Elements with a higher z-index value appear in front of elements with lower values or
+ the default value.
+Stacking Context: The z-index property only works on positioned elements (position: relative, position: 
+absolute, or position: fixed).
+Example: -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .red {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      z-index: 1; /* Lower z-index */
+    }
+
+    .blue {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      position: absolute;
+      top: 70px;
+      left: 70px;
+      z-index: 2; /* Higher z-index */
+    }
+  </style>
+</head>
+<body>
+
+<div class="red"></div>
+<div class="blue"></div>
+
+</body>
+</html>
+
+
+<!-- Explanation:
+In this example, there are two positioned elements: a red square and a blue square.
+The red square has a z-index of 1, and the blue square has a z-index of 2.
+The blue square, having a higher z-index, will stack on top of the red square because it's set to 2,
+ while the red square's z-index is 1. -->
